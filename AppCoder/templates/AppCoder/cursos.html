@@ -11,4 +11,40 @@
 
 <h1> Hola CURSOS</h1>
 
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }} <!-- form.as_p / form.as_ul / form -->
+    </table>
+    <input type="submit" value="Agregar">         
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>comision</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+        {% for curso in cursos %}
+        <tr>
+            <td>
+                {{ curso.id}}
+            </td>
+            <td>
+                {{ curso.nombre}}
+            </td>
+            <td>
+                {{ curso.comision}}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}

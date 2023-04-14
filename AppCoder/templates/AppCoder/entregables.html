@@ -11,4 +11,44 @@
 
 <h1> Hola ENTREGABLES</h1>
 
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }} <!-- form.as_p / form.as_ul / form -->
+    </table>
+    <input type="submit" value="Agregar">         
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>fecha_entrega</th>
+            <th>entregado</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+        {% for entregable in entregables %}
+        <tr>
+            <td>
+                {{ entregable.id}}
+            </td>
+            <td>
+                {{ entregable.nombre}}
+            </td>
+            <td>
+                {{ entregable.fecha_entrega}}
+            </td>
+            <td>
+                {{ entregable.entregado}}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}
