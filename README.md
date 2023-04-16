@@ -1,7 +1,24 @@
-# Titulo Principal markdown
+## PROFESOR
 
-## Segundo Titulo
+- Nombre 
+- Apellido
+- Email
+- Profesion
 
-- Primero 
-- Segundo
-- Tercero
+
+## ESTUDIANTE
+
+- Nombre 
+- Apellido
+- Email
+
+## ENTREGABLE
+
+- Nombre
+- Fecha de entrega
+- Entragado
+
+## Curso
+
+- Nombre
+- Comision
